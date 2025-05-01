@@ -1,0 +1,189 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "actiongraph/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Base Editor Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/actiongraph.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/actiongraph.dll": {}
+        }
+      },
+      "Base Editor Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Base Editor Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Base Editor Library.dll": {}
+        }
+      },
+      "Base Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Base Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Base Library.dll": {}
+        }
+      },
+      "boss_fights/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Base Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/boss_fights.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/boss_fights.dll": {}
+        }
+      },
+      "hammer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Base Editor Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/hammer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/hammer.dll": {}
+        }
+      },
+      "shadergraph/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Base Editor Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/shadergraph.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/shadergraph.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "actiongraph/1.0.0": {
+      "type": "project",
+      "path": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ActionGraph\\Code\\actiongraph.csproj",
+      "msbuildProject": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ActionGraph\\Code\\actiongraph.csproj"
+    },
+    "Base Editor Library/1.0.0": {
+      "type": "project",
+      "path": "D:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj",
+      "msbuildProject": "D:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj"
+    },
+    "Base Library/1.0.0": {
+      "type": "project",
+      "path": "D:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj",
+      "msbuildProject": "D:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\base\\Code\\Base Library.csproj"
+    },
+    "boss_fights/1.0.0": {
+      "type": "project",
+      "path": "../Code/boss_fights.csproj",
+      "msbuildProject": "../Code/boss_fights.csproj"
+    },
+    "hammer/1.0.0": {
+      "type": "project",
+      "path": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\Hammer\\Code\\hammer.csproj",
+      "msbuildProject": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\Hammer\\Code\\hammer.csproj"
+    },
+    "shadergraph/1.0.0": {
+      "type": "project",
+      "path": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj",
+      "msbuildProject": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "Base Editor Library >= 1.0.0",
+      "actiongraph >= 1.0.0",
+      "boss_fights >= 1.0.0",
+      "hammer >= 1.0.0",
+      "shadergraph >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\yatom\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Editor\\boss_fights.editor.csproj",
+      "projectName": "boss_fights.editor",
+      "projectPath": "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Editor\\boss_fights.editor.csproj",
+      "packagesPath": "C:\\Users\\yatom\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Editor\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\yatom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "c:\\users\\yatom\\onedrive\\документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj": {
+              "projectPath": "c:\\users\\yatom\\onedrive\\документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj"
+            },
+            "D:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj": {
+              "projectPath": "D:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj"
+            },
+            "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ActionGraph\\Code\\actiongraph.csproj": {
+              "projectPath": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ActionGraph\\Code\\actiongraph.csproj"
+            },
+            "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\Hammer\\Code\\hammer.csproj": {
+              "projectPath": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\Hammer\\Code\\hammer.csproj"
+            },
+            "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj": {
+              "projectPath": "D:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj"
+            }
+          }
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
