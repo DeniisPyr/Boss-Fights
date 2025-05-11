@@ -40,22 +40,12 @@
                 "prefab": "prefabs/player.prefab"
               },
               "SpawnPoints": [
-                {
-                  "_type": "gameobject",
-                  "go": "d31beaab-48ee-40a7-ade3-ca48c5b0aa45"
-                },
-                {
-                  "_type": "gameobject",
-                  "go": "fc17154e-510b-43ed-984f-136b1465faff"
-                },
-                {
-                  "_type": "gameobject",
-                  "go": "c8aeff6a-f59a-4e65-aa93-a73d1a5c88c7"
-                }
+                null
               ],
               "StartServer": true
             }
-          ]
+          ],
+          "Children": []
         }
       ]
     },
@@ -64,6 +54,7 @@
       "Flags": 0,
       "Name": "\uD83D\uDD34Scene",
       "Enabled": true,
+      "Components": [],
       "Children": [
         {
           "__guid": "9fbda815-765b-440f-8ad9-f940e9c626d8",
@@ -115,7 +106,8 @@
               "Title": "Boss Fights",
               "Version": null
             }
-          ]
+          ],
+          "Children": []
         }
       ]
     },
@@ -124,6 +116,7 @@
       "Flags": 0,
       "Name": "\uD83D\uDD34Player",
       "Enabled": true,
+      "Components": [],
       "Children": [
         {
           "__guid": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d",
@@ -131,8 +124,271 @@
           "Name": "Player",
           "Position": "36.83114,0,18.41172",
           "Enabled": true,
-          "__Prefab": "prefabs/player.prefab",
-          "__PrefabVariables": {}
+          "Components": [
+            {
+              "__type": "Sandbox.PlayerController",
+              "__guid": "674f11c7-6ffe-4ba3-b3bb-ddd125372b95",
+              "AccelerationTime": 0,
+              "AimStrengthBody": 1,
+              "AimStrengthEyes": 1,
+              "AimStrengthHead": 1,
+              "AirFriction": 0.1,
+              "AltMoveButton": "run",
+              "Body": {
+                "_type": "component",
+                "component_id": "a3cd507b-7f12-41e5-81d2-0a47c7def547",
+                "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d",
+                "component_type": "Rigidbody"
+              },
+              "BodyCollisionTags": null,
+              "BodyHeight": 72,
+              "BodyMass": 500,
+              "BodyRadius": 16,
+              "BrakePower": 1,
+              "CameraOffset": "256,0,12",
+              "ColliderObject": {
+                "_type": "gameobject",
+                "go": "7a543b05-7d5c-4bd3-b024-8eb9f2c1a022"
+              },
+              "DeaccelerationTime": 0,
+              "DuckedHeight": 36,
+              "DuckedSpeed": 70,
+              "EnableFootstepSounds": true,
+              "EnablePressing": true,
+              "EyeDistanceFromTop": 8,
+              "FootstepMixer": {
+                "Name": "unknown",
+                "Id": "00000000-0000-0000-0000-000000000000"
+              },
+              "FootstepVolume": 1,
+              "HideBodyInFirstPerson": true,
+              "JumpSpeed": 300,
+              "LookSensitivity": 1,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "PitchClamp": 90,
+              "ReachLength": 130,
+              "Renderer": {
+                "_type": "component",
+                "component_id": "a958964f-2611-469a-be80-c63745cfc99f",
+                "go": "3feaebe0-3bda-46f9-af25-7e6c09cdb3a8",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "RotateWithGround": true,
+              "RotationAngleLimit": 45,
+              "RotationSpeed": 1,
+              "RunByDefault": false,
+              "RunSpeed": 320,
+              "ShowColliderComponents": false,
+              "ShowRigidbodyComponent": false,
+              "ThirdPerson": true,
+              "ToggleCameraModeButton": "view",
+              "UseAnimatorControls": true,
+              "UseButton": "use",
+              "UseCameraControls": true,
+              "UseFovFromPreferences": true,
+              "UseInputControls": true,
+              "UseLookControls": true,
+              "WalkSpeed": 110
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "a3cd507b-7f12-41e5-81d2-0a47c7def547",
+              "AngularDamping": 1,
+              "Gravity": true,
+              "LinearDamping": 0.1,
+              "Locking": {
+                "X": false,
+                "Y": false,
+                "Z": false,
+                "Pitch": true,
+                "Yaw": true,
+                "Roll": true
+              },
+              "MassCenterOverride": "0,0,36",
+              "MassOverride": 500,
+              "MotionEnabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OverrideMassCenter": true,
+              "RigidbodyFlags": "DisableCollisionSounds",
+              "StartAsleep": false
+            },
+            {
+              "__type": "Sandbox.Movement.MoveModeWalk",
+              "__guid": "cceb721d-f790-4be7-889d-39bb83e3bced",
+              "GroundAngle": 45,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Priority": 0,
+              "StepDownHeight": 18,
+              "StepUpHeight": 18
+            },
+            {
+              "__type": "Sandbox.Movement.MoveModeSwim",
+              "__guid": "cf59e061-69f6-4618-8af2-3b7b5b8f2e6a",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Priority": 10,
+              "SwimLevel": 0.7
+            },
+            {
+              "__type": "Sandbox.Movement.MoveModeLadder",
+              "__guid": "1836fe2d-e18a-4892-9270-335ee8882a0b",
+              "ClimbableTags": "ladder",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Priority": 5,
+              "Speed": 1
+            },
+            {
+              "__type": "PlayerStats",
+              "__guid": "9893f0b7-d9fa-4800-8525-87e8aeee5607",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "perkArmor": 0,
+              "perkDamage": 0,
+              "perkHealth": 0,
+              "perkJump": 3,
+              "perkSpeed": 6,
+              "playerArmor": 0,
+              "playerHealth": 231,
+              "ply": {
+                "_type": "component",
+                "component_id": "674f11c7-6ffe-4ba3-b3bb-ddd125372b95",
+                "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d",
+                "component_type": "PlayerController"
+              },
+              "RespawnPosition": "-5420.136,-3623.15,2720.167"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "3feaebe0-3bda-46f9-af25-7e6c09cdb3a8",
+              "Flags": 0,
+              "Name": "Body",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.SkinnedModelRenderer",
+                  "__guid": "a958964f-2611-469a-be80-c63745cfc99f",
+                  "AnimationGraph": null,
+                  "BodyGroups": 341,
+                  "BoneMergeTarget": null,
+                  "CreateAttachments": false,
+                  "CreateBoneObjects": false,
+                  "MaterialGroup": null,
+                  "MaterialOverride": null,
+                  "Model": "models/citizen/citizen.vmdl",
+                  "Morphs": {},
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Parameters": {
+                    "bools": {},
+                    "ints": {},
+                    "floats": {},
+                    "vectors": {},
+                    "rotations": {}
+                  },
+                  "PlaybackRate": 1,
+                  "RenderOptions": {
+                    "GameLayer": true,
+                    "OverlayLayer": false,
+                    "BloomLayer": false,
+                    "AfterUILayer": false
+                  },
+                  "RenderType": "On",
+                  "Sequence": {
+                    "Name": null,
+                    "Looping": true
+                  },
+                  "Tint": "1,1,1,1",
+                  "UseAnimGraph": true
+                }
+              ],
+              "Children": []
+            },
+            {
+              "__guid": "7a543b05-7d5c-4bd3-b024-8eb9f2c1a022",
+              "Flags": 1,
+              "Name": "Colliders",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.CapsuleCollider",
+                  "__guid": "0e781401-d00e-401d-b537-3804bf03668a",
+                  "End": "0,0,45.05097",
+                  "Friction": 0,
+                  "IsTrigger": false,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Radius": 11.313708,
+                  "Start": "0,0,60.68629",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                },
+                {
+                  "__type": "Sandbox.BoxCollider",
+                  "__guid": "651df1e2-9652-4a92-9c7c-c5bd69008827",
+                  "Center": "0,0,18",
+                  "Friction": 0,
+                  "IsTrigger": false,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "OnObjectTriggerEnter": null,
+                  "OnObjectTriggerExit": null,
+                  "OnTriggerEnter": null,
+                  "OnTriggerExit": null,
+                  "Scale": "16,16,36",
+                  "Static": false,
+                  "Surface": null,
+                  "SurfaceVelocity": "0,0,0"
+                }
+              ],
+              "Children": []
+            }
+          ]
         }
       ]
     },
@@ -140,28 +396,226 @@
       "__guid": "e44e25f4-a1c8-4ce6-81da-94db37b4ca0a",
       "Flags": 0,
       "Name": "\uD83D\uDD34Enemy",
-      "Enabled": true
-    },
-    {
-      "__guid": "d31beaab-48ee-40a7-ade3-ca48c5b0aa45",
-      "Flags": 0,
-      "Name": "Spawn GG",
-      "Position": "-300.853,-70.36279,29.75246",
-      "Enabled": true
-    },
-    {
-      "__guid": "fc17154e-510b-43ed-984f-136b1465faff",
-      "Flags": 0,
-      "Name": "Spawn GG (1)",
-      "Position": "211.234,-70.36279,29.75246",
-      "Enabled": true
-    },
-    {
-      "__guid": "c8aeff6a-f59a-4e65-aa93-a73d1a5c88c7",
-      "Flags": 0,
-      "Name": "Spawn GG (2)",
-      "Position": "68.55333,7.830978,-58.06961",
-      "Enabled": true
+      "Enabled": true,
+      "Components": [],
+      "Children": [
+        {
+          "__guid": "ad9253cc-c2c0-4557-b956-87876bc6e8d6",
+          "Flags": 0,
+          "Name": "zombie (sphere)",
+          "Position": "0,-38.58649,100.7623",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "c9f379f2-67fe-4570-8476-8f502fcb6afb",
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/sphere.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "e019f40e-f38c-43dc-a54d-9c21670595e3",
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Radius": 32,
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "b19df0f8-72e1-4ddf-b695-4056cf6440c8",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": false,
+                "Y": false,
+                "Z": false,
+                "Pitch": false,
+                "Yaw": false,
+                "Roll": false
+              },
+              "MassCenterOverride": "0,0,0",
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OverrideMassCenter": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "ZombieStats",
+              "__guid": "69d34a17-3fa8-4060-a594-434207c8977f",
+              "MaxSpeed": 400,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Player": {
+                "_type": "gameobject",
+                "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d"
+              },
+              "Rb": {
+                "_type": "component",
+                "component_id": "b19df0f8-72e1-4ddf-b695-4056cf6440c8",
+                "go": "ad9253cc-c2c0-4557-b956-87876bc6e8d6",
+                "component_type": "Rigidbody"
+              },
+              "Speed": 300
+            }
+          ],
+          "Children": []
+        },
+        {
+          "__guid": "682a234f-c9b5-4a78-a3ee-824e921f65be",
+          "Flags": 0,
+          "Name": "zombie (cube)",
+          "Position": "-102.2655,0,77.59978",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "Sandbox.ModelRenderer",
+              "__guid": "911d2d14-3d03-4b71-b35d-12172707d907",
+              "BodyGroups": 18446744073709551615,
+              "CreateAttachments": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/dev/box.vmdl",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "RenderOptions": {
+                "GameLayer": true,
+                "OverlayLayer": false,
+                "BloomLayer": false,
+                "AfterUILayer": false
+              },
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "fb616548-fc20-4f32-ba38-0208be6ec121",
+              "Center": "0,0,0",
+              "Friction": null,
+              "IsTrigger": false,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "50,50,50",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "Sandbox.Rigidbody",
+              "__guid": "4b4c51d7-f373-4c4e-b27a-3539846b4de4",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {
+                "X": false,
+                "Y": false,
+                "Z": false,
+                "Pitch": false,
+                "Yaw": false,
+                "Roll": false
+              },
+              "MassCenterOverride": "0,0,0",
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "OverrideMassCenter": false,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "ZombieStats",
+              "__guid": "cd63b535-ab25-459f-9299-81e26dfb01c7",
+              "MaxSpeed": 400,
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "Player": {
+                "_type": "gameobject",
+                "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d"
+              },
+              "Rb": {
+                "_type": "component",
+                "component_id": "4b4c51d7-f373-4c4e-b27a-3539846b4de4",
+                "go": "682a234f-c9b5-4a78-a3ee-824e921f65be",
+                "component_type": "Rigidbody"
+              },
+              "Speed": 300
+            },
+            {
+              "__type": "DamageTracker",
+              "__guid": "263019ef-2ff2-4bec-b19d-c7a62d189704",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
+            }
+          ],
+          "Children": []
+        }
+      ]
     },
     {
       "__guid": "3fb7c3ff-9954-4a46-ab9d-dd292ad3728b",
@@ -195,18 +649,14 @@
           "ZFar": 10000,
           "ZNear": 10
         }
-      ]
+      ],
+      "Children": []
     }
   ],
   "SceneProperties": {
-    "FixedUpdateFrequency": 50,
-    "MaxFixedUpdates": 5,
-    "NetworkFrequency": 60,
     "NetworkInterpolation": true,
-    "PhysicsSubSteps": 1,
-    "ThreadedAnimation": true,
     "TimeScale": 1,
-    "UseFixedUpdate": true,
+    "WantsSystemScene": true,
     "Metadata": {
       "Title": "Boss Fights"
     },
