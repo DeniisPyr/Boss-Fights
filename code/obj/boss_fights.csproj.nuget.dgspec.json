@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj": {}
+    "c:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj": {
+    "c:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj",
+        "projectUniqueName": "c:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj",
         "projectName": "boss_fights",
-        "projectPath": "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj",
+        "projectPath": "c:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\boss_fights.csproj",
         "packagesPath": "C:\\Users\\yatom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\obj\\",
+        "outputPath": "c:\\Users\\yatom\\OneDrive\\Документы\\s&box projects\\boss_fights\\Code\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yatom\\AppData\\Roaming\\NuGet\\NuGet.Config",

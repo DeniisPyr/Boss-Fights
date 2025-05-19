@@ -1,29 +1,42 @@
 using Sandbox;
 
-public sealed class ZombieStats : Component
+public sealed class ZombieStats : Component 
 {
-	[Property] public GameObject Player { get; set; }
-	[Property] public float Speed { get; set; } = 300f;
-	[Property] public float MaxSpeed { get; set; } = 400f;
-	[Property] public Rigidbody Rb { get; set; }
+	#region vars
+	[Property, Group( "Reference" )] public GameObject Player { get; set; }
+	[Property, Group( "Reference" )] public Rigidbody Rb { get; set; }
+	[Property, Group( "Movement" )] public float Exp { get; set; } = 1.5f;
+	[Property, Group( "Movement" )] public float SnapDistance { get; set; } = 1000f;
+	#endregion
 
+	#region Logic
+	protected void MoveControl()
+	{
+		Vector3 playerPos = Player.Transform.Position;
+		Vector3 zombiePos = Transform.Position;
+		Vector3 direction = (playerPos - zombiePos).Normal;
+
+		float distance = Vector3.DistanceBetween( playerPos, zombiePos );
+
+		float scaledImpulse = MathF.Pow( 500, Exp );
+
+		DebugOverlay.Line( zombiePos, playerPos, Color.Red, 0 ); // Debug line for checking "position detection" logic
+
+		Rb.ApplyImpulse( direction * scaledImpulse );
+
+		if ( distance > SnapDistance )
+		{
+			Rb.Velocity = direction * 1000;
+		}
+	}
+	#endregion
+
+	#region Component
 	protected override void OnUpdate()
 	{
 		if ( Player == null || Rb == null ) return;
-
-		Vector3 playerPos = Player.Transform.Position;
-		Vector3 zombiePos = Transform.Position;
-		Vector3 direction = (playerPos - zombiePos);
-
-		float distance = direction.Length;
-
-		direction = direction.Normal;
-
-		//DebugOverlay.Line( zombiePos, playerPos, Color.Red, duration: 0 ); DEBUG
-
-		if ( Rb.Velocity.Length < MaxSpeed )
-		{
-			Rb.ApplyForce(direction * Speed);
-		}
+		MoveControl();
 	}
+	#endregion
 }
+

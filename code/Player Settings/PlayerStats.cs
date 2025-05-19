@@ -1,8 +1,8 @@
 public sealed class PlayerStats : Component {
 	
 	#region Vars 
-	[Property, Group( "Other" )] public PlayerController ply { get; set; }
-	[Property, Group( "Other" )] public Vector3 RespawnPosition { get; set; }
+	[Property, Group( "Reference" )] public PlayerController ply { get; set; }
+	[Property, Group( "Reference" )] public Vector3 RespawnPosition { get; set; }
 
 	[Property, Group("Stats")] public float playerHealth { get; set; } = 100f;
 	[Property, Group("Stats")] public float playerArmor { get; set; } = 0f;
@@ -17,21 +17,17 @@ public sealed class PlayerStats : Component {
 
 
 	#region Logic
-	private void TakeDamage(float damage)
+	public void TakeDamage(float damage)
 	{
 		playerHealth -= damage;
 	}
 	private void HealtLogic(){
-		 //Log.Info( $"{playerHealth}" );
 		if (playerHealth <= 0)
 		{
-			Log.Info( "Player dead. Teleporting to respawn..." );
-
 			ply.Transform.Position = RespawnPosition;
 			playerHealth = _oldPlayerHealth;
 
 		}
-		//TakeDamage( 0.1f );
 
 	}
 
@@ -68,6 +64,7 @@ public sealed class PlayerStats : Component {
 		_oldPlayerHealth = playerHealth;
 		PerkSpeedRework();
 		PerkJumpRework();
+
 	}
 
 	protected override void OnUpdate()

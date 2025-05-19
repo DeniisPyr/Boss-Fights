@@ -114,7 +114,7 @@
     {
       "__guid": "3ce79018-bebe-457f-9b97-190b1b614cd5",
       "Flags": 0,
-      "Name": "\uD83D\uDD34Player",
+      "Name": "\uD83D\uDD34Users",
       "Enabled": true,
       "Components": [],
       "Children": [
@@ -125,6 +125,30 @@
           "Position": "36.83114,0,18.41172",
           "Enabled": true,
           "Components": [
+            {
+              "__type": "PlayerStats",
+              "__guid": "9893f0b7-d9fa-4800-8525-87e8aeee5607",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null,
+              "perkArmor": 0,
+              "perkDamage": 0,
+              "perkHealth": 0,
+              "perkJump": 0,
+              "perkSpeed": 0,
+              "playerArmor": 0,
+              "playerHealth": 100,
+              "ply": {
+                "_type": "component",
+                "component_id": "674f11c7-6ffe-4ba3-b3bb-ddd125372b95",
+                "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d",
+                "component_type": "PlayerController"
+              },
+              "RespawnPosition": "-5420.136,-3623.15,2720.167"
+            },
             {
               "__type": "Sandbox.PlayerController",
               "__guid": "674f11c7-6ffe-4ba3-b3bb-ddd125372b95",
@@ -262,28 +286,35 @@
               "Speed": 1
             },
             {
-              "__type": "PlayerStats",
-              "__guid": "9893f0b7-d9fa-4800-8525-87e8aeee5607",
+              "__type": "Sandbox.BoxCollider",
+              "__guid": "bce43e55-7362-497d-83af-d7f0dc5ad682",
+              "Center": "0,0,37.80003",
+              "Friction": null,
+              "IsTrigger": true,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
               "OnComponentFixedUpdate": null,
               "OnComponentStart": null,
               "OnComponentUpdate": null,
-              "perkArmor": 0,
-              "perkDamage": 0,
-              "perkHealth": 0,
-              "perkJump": 3,
-              "perkSpeed": 6,
-              "playerArmor": 0,
-              "playerHealth": 231,
-              "ply": {
-                "_type": "component",
-                "component_id": "674f11c7-6ffe-4ba3-b3bb-ddd125372b95",
-                "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d",
-                "component_type": "PlayerController"
-              },
-              "RespawnPosition": "-5420.136,-3623.15,2720.167"
+              "OnObjectTriggerEnter": null,
+              "OnObjectTriggerExit": null,
+              "OnTriggerEnter": null,
+              "OnTriggerExit": null,
+              "Scale": "26.70004,14.90002,66.79996",
+              "Static": false,
+              "Surface": null,
+              "SurfaceVelocity": "0,0,0"
+            },
+            {
+              "__type": "PlayerDamageTracker",
+              "__guid": "f4b51999-4c2a-43db-b2b9-b20f88bf6ca2",
+              "OnComponentDestroy": null,
+              "OnComponentDisabled": null,
+              "OnComponentEnabled": null,
+              "OnComponentFixedUpdate": null,
+              "OnComponentStart": null,
+              "OnComponentUpdate": null
             }
           ],
           "Children": [
@@ -291,6 +322,7 @@
               "__guid": "3feaebe0-3bda-46f9-af25-7e6c09cdb3a8",
               "Flags": 0,
               "Name": "Body",
+              "Position": "0,0,3.960602",
               "Enabled": true,
               "Components": [
                 {
@@ -387,6 +419,53 @@
                 }
               ],
               "Children": []
+            },
+            {
+              "__guid": "8cf61348-1910-40e5-8572-83d341771027",
+              "Flags": 0,
+              "Name": "PlayerHUD",
+              "Position": "-62.48211,61.67761,45.45556",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "Sandbox.ScreenPanel",
+                  "__guid": "665f371b-1a06-450b-b4ac-a51f15752658",
+                  "AutoScreenScale": true,
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Opacity": 1,
+                  "Scale": 1,
+                  "ScaleStrategy": "ConsistentHeight",
+                  "TargetCamera": {
+                    "_type": "component",
+                    "component_id": "c111b01f-22bf-41ef-94a3-9a5f0497e58e",
+                    "go": "3fb7c3ff-9954-4a46-ab9d-dd292ad3728b",
+                    "component_type": "CameraComponent"
+                  },
+                  "ZIndex": 100
+                },
+                {
+                  "__type": "Sandbox.PlayerMenuHUD",
+                  "__guid": "2c264634-b211-460e-93c0-8386c6d3a0ef",
+                  "OnComponentDestroy": null,
+                  "OnComponentDisabled": null,
+                  "OnComponentEnabled": null,
+                  "OnComponentFixedUpdate": null,
+                  "OnComponentStart": null,
+                  "OnComponentUpdate": null,
+                  "Ply": {
+                    "_type": "component",
+                    "component_id": "674f11c7-6ffe-4ba3-b3bb-ddd125372b95",
+                    "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d",
+                    "component_type": "PlayerController"
+                  }
+                }
+              ],
+              "Children": []
             }
           ]
         }
@@ -403,7 +482,8 @@
           "__guid": "ad9253cc-c2c0-4557-b956-87876bc6e8d6",
           "Flags": 0,
           "Name": "zombie (sphere)",
-          "Position": "0,-38.58649,100.7623",
+          "Position": "-255.314,-38.58649,100.7623",
+          "Tags": "enemy",
           "Enabled": true,
           "Components": [
             {
@@ -480,7 +560,7 @@
             {
               "__type": "ZombieStats",
               "__guid": "69d34a17-3fa8-4060-a594-434207c8977f",
-              "MaxSpeed": 400,
+              "Exp": 1.5,
               "OnComponentDestroy": null,
               "OnComponentDisabled": null,
               "OnComponentEnabled": null,
@@ -497,120 +577,7 @@
                 "go": "ad9253cc-c2c0-4557-b956-87876bc6e8d6",
                 "component_type": "Rigidbody"
               },
-              "Speed": 300
-            }
-          ],
-          "Children": []
-        },
-        {
-          "__guid": "682a234f-c9b5-4a78-a3ee-824e921f65be",
-          "Flags": 0,
-          "Name": "zombie (cube)",
-          "Position": "-102.2655,0,77.59978",
-          "Enabled": true,
-          "Components": [
-            {
-              "__type": "Sandbox.ModelRenderer",
-              "__guid": "911d2d14-3d03-4b71-b35d-12172707d907",
-              "BodyGroups": 18446744073709551615,
-              "CreateAttachments": false,
-              "MaterialGroup": null,
-              "MaterialOverride": null,
-              "Model": "models/dev/box.vmdl",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "RenderOptions": {
-                "GameLayer": true,
-                "OverlayLayer": false,
-                "BloomLayer": false,
-                "AfterUILayer": false
-              },
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
-              "__type": "Sandbox.BoxCollider",
-              "__guid": "fb616548-fc20-4f32-ba38-0208be6ec121",
-              "Center": "0,0,0",
-              "Friction": null,
-              "IsTrigger": false,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OnObjectTriggerEnter": null,
-              "OnObjectTriggerExit": null,
-              "OnTriggerEnter": null,
-              "OnTriggerExit": null,
-              "Scale": "50,50,50",
-              "Static": false,
-              "Surface": null,
-              "SurfaceVelocity": "0,0,0"
-            },
-            {
-              "__type": "Sandbox.Rigidbody",
-              "__guid": "4b4c51d7-f373-4c4e-b27a-3539846b4de4",
-              "AngularDamping": 0,
-              "Gravity": true,
-              "LinearDamping": 0,
-              "Locking": {
-                "X": false,
-                "Y": false,
-                "Z": false,
-                "Pitch": false,
-                "Yaw": false,
-                "Roll": false
-              },
-              "MassCenterOverride": "0,0,0",
-              "MassOverride": 0,
-              "MotionEnabled": true,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "OverrideMassCenter": false,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
-            },
-            {
-              "__type": "ZombieStats",
-              "__guid": "cd63b535-ab25-459f-9299-81e26dfb01c7",
-              "MaxSpeed": 400,
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null,
-              "Player": {
-                "_type": "gameobject",
-                "go": "c7e825b4-8c3f-47ed-a0e5-a7b736a4e18d"
-              },
-              "Rb": {
-                "_type": "component",
-                "component_id": "4b4c51d7-f373-4c4e-b27a-3539846b4de4",
-                "go": "682a234f-c9b5-4a78-a3ee-824e921f65be",
-                "component_type": "Rigidbody"
-              },
-              "Speed": 300
-            },
-            {
-              "__type": "DamageTracker",
-              "__guid": "263019ef-2ff2-4bec-b19d-c7a62d189704",
-              "OnComponentDestroy": null,
-              "OnComponentDisabled": null,
-              "OnComponentEnabled": null,
-              "OnComponentFixedUpdate": null,
-              "OnComponentStart": null,
-              "OnComponentUpdate": null
+              "SnapDistance": 1000
             }
           ],
           "Children": []

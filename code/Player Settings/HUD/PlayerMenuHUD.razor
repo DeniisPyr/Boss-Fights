@@ -1,0 +1,30 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root class="@(IsMenuOpen ? "hide" : "")">
+    @if (IsMenuOpen) return;
+    <div class="button0">
+        Quit
+    </div>
+    
+</root>
+
+@code
+{
+    [Property] public PlayerController Ply { get; set; }
+    public bool IsMenuOpen { get; set; }
+
+    protected override void OnUpdate()
+    {
+        if (Input.EscapePressed)
+        {
+            IsMenuOpen = !IsMenuOpen;
+        }
+    }
+
+    protected override int BuildHash() {
+        return System.HashCode.Combine( "" );
+    }
+}
